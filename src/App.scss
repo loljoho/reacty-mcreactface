@@ -1,3 +1,7 @@
+$color-bg:      #eeeeee;
+$color-text:    #222222;
+$color-link:    #f000f0;
+
 .App {
   text-align: center;
 }
@@ -7,16 +11,16 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: $color-bg;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: $color-text;
 }
 
 .App-link {
-  color: #09d3ac;
+  color: $color-link;
 }
