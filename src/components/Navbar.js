@@ -10,9 +10,9 @@ class Navbar extends Component {
       <nav className="navbar is-fixed-top is-transparent">
         <div className="container">
           <div className="navbar-brand">
-            <a className="navbar-item" href="https://bulma.io">
+            <Link className="navbar-item" to="/">
               <img src={logo} alt="Reacty McReactface" />
-            </a>
+            </Link>
             <div className="navbar-burger burger" data-target="navbarExampleTransparentExample">
               <span></span>
               <span></span>
@@ -22,16 +22,16 @@ class Navbar extends Component {
 
           <div id="navbarExampleTransparentExample" className="navbar-menu">
             <div className="navbar-start">
-              <Link className="navbar-item" href="#">
-                Home
+              <Link className="navbar-item" to="/dashboard">
+                Dashboard
               </Link>
             </div>
 
             <div className="navbar-end">
-              <Link className="navbar-item" href="#">
+              <Link className="navbar-item" to="/about">
                 About
               </Link>
-              <Link className="navbar-item" href="#">
+              <Link className="navbar-item" to="/halp">
                 Halp
               </Link>
             </div>

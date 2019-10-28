@@ -5,24 +5,17 @@ import {
   Route
 } from 'react-router-dom';
 
-import Navbar from './components/Navbar';
-import Main from './components/Main';
+import Layout from './components/Layout';
 
 import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Navbar />
-        {/* Switchy McSwitchface */}
-        <Switch>
-          <Route path="/">
-            <Main />
-          </Route>
-        </Switch>
-      </Router>
-    </div>
+    <Router basename={process.env.PUBLIC_URL}>
+      <Switch>
+        <Route path="/" name="Home" component={Layout} />
+      </Switch>
+    </Router>
   );
 }
 

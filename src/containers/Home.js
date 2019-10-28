@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../logo.png';
 
-const Main = () => (
+const Home = () => (
   <header className="App-header">
     <img src={logo} className="App-logo" alt="logo" />
     <p>
@@ -18,4 +18,4 @@ const Main = () => (
   </header>
 );
 
-export default Main;
+export default Home;
