@@ -13,14 +13,14 @@ class Navbar extends Component {
             <Link className="navbar-item" to="/">
               <img src={logo} alt="Reacty McReactface" />
             </Link>
-            <div className="navbar-burger burger" data-target="navbarExampleTransparentExample">
+            <div className="navbar-burger burger" data-target="siteNavbar">
               <span></span>
               <span></span>
               <span></span>
             </div>
           </div>
 
-          <div id="navbarExampleTransparentExample" className="navbar-menu">
+          <div id="siteNavbar" className="navbar-menu">
             <div className="navbar-start">
               <Link className="navbar-item" to="/dashboard">
                 Dashboard
