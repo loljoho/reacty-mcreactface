@@ -16,11 +16,11 @@ export class Layout extends Component {
     return (
       <div className="App-Layout">
       <Navbar />
-          {/* Switchy McSwitchface */}
-          <Switch>
-            <Route exact path="/" name="Home" component={Home} />
-            <Route path="/dashboard" name="Dashboard" component={Dashboard} />
-          </Switch>
+      {/* Switchy McSwitchface */}
+      <Switch>
+        <Route exact path="/" name="Home" component={Home} />
+        <Route path="/dashboard" name="Dashboard" component={Dashboard} />
+      </Switch>
       </div>
     )
   }
