@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import {
+  Link
+} from 'react-router-dom';
 import logo from '../logo.png';
 
 class Navbar extends Component {
@@ -19,18 +22,18 @@ class Navbar extends Component {
 
           <div id="navbarExampleTransparentExample" className="navbar-menu">
             <div className="navbar-start">
-              <a className="navbar-item" href="#">
+              <Link className="navbar-item" href="#">
                 Home
-              </a>
+              </Link>
             </div>
 
             <div className="navbar-end">
-              <a className="navbar-item" href="#">
+              <Link className="navbar-item" href="#">
                 About
-              </a>
-              <a className="navbar-item" href="#">
+              </Link>
+              <Link className="navbar-item" href="#">
                 Halp
-              </a>
+              </Link>
             </div>
           </div>
         </div>
