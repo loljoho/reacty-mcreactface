@@ -14,7 +14,7 @@ import {
 export class Layout extends Component {
   render() {
     return (
-      <div className="App-Layout">
+      <div className="App">
         <Navbar />
         {/* Switchy McSwitchface */}
         <Switch>

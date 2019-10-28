@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../logo.png';
 
 const Dashboard = () => (
-  <header className="App-header">
+  <div className="App__inner">
     <img src={logo} className="App-logo" alt="logo" />
     <p>
       DASH BERLIN BOARD
@@ -15,7 +15,7 @@ const Dashboard = () => (
     >
       Dashy McDashface
     </a>
-  </header>
+  </div>
 );
 
 export default Dashboard;

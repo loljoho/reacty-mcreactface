@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../logo.png';
 
 const Home = () => (
-  <header className="App-header">
+  <div className="App__inner">
     <img src={logo} className="App-logo" alt="logo" />
     <p>
       Edit <code>src/App.js</code> and save to reload.
@@ -15,7 +15,7 @@ const Home = () => (
     >
       Learn React
     </a>
-  </header>
+  </div>
 );
 
 export default Home;
