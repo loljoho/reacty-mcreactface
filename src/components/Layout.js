@@ -14,16 +14,16 @@ import {
 export class Layout extends Component {
   render() {
     return (
-      <div className="App">
+      <React.Fragment>
         <Navbar />
         {/* Switchy McSwitchface */}
         <Switch>
           <Route exact path="/" name="Home" component={Home} />
           <Route path="/dashboard" name="Dashboard" component={Dashboard} />
         </Switch>
-      </div>
+      </React.Fragment>
     )
   }
 }
 
-export default Layout
+export default Layout;
