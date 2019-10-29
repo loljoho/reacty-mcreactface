@@ -7,7 +7,7 @@ class Subnav extends Component {
   render() {
     return (
       <React.Fragment>
-        <nav className="subnav level container is-fluid">
+        <nav className="subnav level container">
           <div className="breadcrumb level-left is-small" aria-label="breadcrumbs">
             <ul>
               <li>
