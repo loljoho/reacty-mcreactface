@@ -4,13 +4,13 @@ import {
   Route
 } from 'react-router-dom';
 
-import Navbar from './Navbar';
-import Subnav from './Subnav';
+import Navbar from '../Navbar';
+import Subnav from '../Subnav';
 
 import {
   Home,
   Dashboard
-} from '../containers/';
+} from '../../containers/';
 
 export class Layout extends Component {
   render() {
