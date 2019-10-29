@@ -1,5 +1,5 @@
-import Home from './Home';
-import Dashboard from './Dashboard';
+import Home from './Home/Home';
+import Dashboard from './Dashboard/Dashboard';
 
 export {
   Home,
