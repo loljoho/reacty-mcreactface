@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom';
 
 import Navbar from './Navbar';
+import Subnav from './Subnav';
 
 import {
   Home,
@@ -16,6 +17,7 @@ export class Layout extends Component {
     return (
       <React.Fragment>
         <Navbar />
+        <Subnav />
         {/* Switchy McSwitchface */}
         <Switch>
           <Route exact path="/" name="Home" component={Home} />
