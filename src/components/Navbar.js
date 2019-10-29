@@ -7,7 +7,7 @@ import logo from '../logo.png';
 class Navbar extends Component {
   render = () => {
     return (
-      <nav className="navbar is-fixed-top is-transparent">
+      <nav className="navbar is-fixed-top">
         <div className="container">
           <div className="navbar-brand">
             <Link className="navbar-item" to="/">
