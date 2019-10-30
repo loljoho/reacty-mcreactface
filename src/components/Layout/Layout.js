@@ -12,7 +12,7 @@ import {
   Dashboard
 } from '../../containers';
 
-export class Layout extends Component {
+class Layout extends Component {
   render() {
     return (
       <React.Fragment>
