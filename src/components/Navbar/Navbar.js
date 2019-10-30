@@ -5,7 +5,7 @@ import {
 import logo from '../../logo.png';
 
 class Navbar extends Component {
-  render = () => {
+  render() {
     return (
       <nav className="navbar">
         <div className="container is-fluid">
@@ -39,7 +39,7 @@ class Navbar extends Component {
         </div>
       </nav>
     );
-  };
+  }
 }
 
 export default Navbar;
