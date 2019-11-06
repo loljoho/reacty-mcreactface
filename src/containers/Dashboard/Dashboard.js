@@ -9,15 +9,6 @@ class Dashboard extends Component {
     };
   }
 
-  componentDidMount() {
-    fetch('../data/2019-09-03_2019-10-07/channels.json')
-      .then(response => {
-        console.info(response.json());
-      }).then(data => {
-        this.setState({ data });
-      });
-  }
-
   render() {
     return (
       <div className="App__inner">
