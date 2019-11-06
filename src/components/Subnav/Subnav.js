@@ -3,6 +3,8 @@ import {
   NavLink
 } from 'react-router-dom';
 
+import Filter from './Filter';
+
 class Subnav extends Component {
   render() {
     return (
@@ -34,20 +36,7 @@ class Subnav extends Component {
 
             <div className="level-right">
               <div className="field level-item">
-                <div className="control">
-                  <div className="select is-primary is-small">
-                    <select>
-                      <option>2019</option>
-                      <option>2018</option>
-                      <option>2017</option>
-                      <option>2016</option>
-                      <option>2015</option>
-                      <option>2014</option>
-                      <option>2013</option>
-                      <option>2012</option>
-                    </select>
-                  </div>
-                </div>
+                <Filter minYear="2012" />
               </div>
             </div>
 
