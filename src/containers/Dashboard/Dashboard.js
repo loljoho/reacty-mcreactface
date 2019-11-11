@@ -1,12 +1,26 @@
 import React, { Component } from 'react';
+import API from '../../utils/API';
 import logo from '../../logo.png';
 
 class Dashboard extends Component {
   constructor() {
     super();
     this.state = {
-      data : null
+      data: [],
+      loading: true
     };
+  }
+
+  componentDidMount() {
+    this.setState({ loading: true }, () => {
+      this.loadRaces();
+    });
+  }
+
+  loadRaces(year = 'current') {
+    API.getRaces(year)
+      .then(res => this.setState({ data: res }))
+      .catch(err => console.log(err));
   }
 
   render() {
