@@ -35,7 +35,7 @@ class Filter extends Component {
             </div>
           </div>   
       </React.Fragment>
-    )
+    );
   }
 }
 
