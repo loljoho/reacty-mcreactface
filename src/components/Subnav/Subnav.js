@@ -8,11 +8,11 @@ import Filter from './Filter';
 class Subnav extends Component {
   constructor(props) {
     super(props);
-    this.handleMinYearChange = this.handleMinYearChange.bind(this);
+    this.handleYearChange = this.handleYearChange.bind(this);
   }
 
-  handleMinYearChange(minYear) {
-    console.log(`Subnav handleMinYearChange(${minYear})`);
+  handleYearChange(minYear) {
+    console.log(`Subnav handleYearChange(${minYear})`);
   }
 
   render() {
@@ -46,7 +46,7 @@ class Subnav extends Component {
             <div className="level-right">
               <div className="field level-item">
                 <Filter minYear="2012" 
-                  onValueChange={this.handleMinYearChange} />
+                  onValueChange={this.handleYearChange} />
               </div>
             </div>
 
