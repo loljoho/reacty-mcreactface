@@ -6,7 +6,6 @@ class Filter extends Component {
     this.state = {
       value: new Date().getFullYear()
     };
-
     this.handleChange = this.handleChange.bind(this);
   }
   
