@@ -6,6 +6,15 @@ import {
 import Filter from './Filter';
 
 class Subnav extends Component {
+  constructor(props) {
+    super(props);
+    this.handleMinYearChange = this.handleMinYearChange.bind(this);
+  }
+
+  handleMinYearChange(minYear) {
+    console.log(`Subnav handleMinYearChange(${minYear})`);
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -36,7 +45,8 @@ class Subnav extends Component {
 
             <div className="level-right">
               <div className="field level-item">
-                <Filter minYear="2012" />
+                <Filter minYear="2012" 
+                  onValueChange={this.handleMinYearChange} />
               </div>
             </div>
 
