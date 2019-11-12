@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Table from '../../components/Table/Table';
+//import Table from '../../components/Table/Table';
 import API from '../../utils/API';
 
 class Dashboard extends Component {
@@ -42,7 +42,7 @@ class Dashboard extends Component {
   }
 
   render() {
-    const { data, isLoaded, error } = this.state;
+    const { data: rows, isLoaded, error } = this.state;
 
     if (error) {
       return (
@@ -57,12 +57,24 @@ class Dashboard extends Component {
         </div>
       )
     } else {
-      console.log(data);
+      console.log(rows);
       return (
         <div className="container">
-          <Table data={data}
-            isLoaded={isLoaded}
-            error={error} />
+          <table className="table">
+            <tbody>
+            {
+                rows.map((row, index) => {
+                  return (
+                    <tr key={index}>
+                    {
+                      row.map((cell, idx) => <td key="{idx}">{ cell }</td>)
+                    }
+                    </tr>
+                  );
+                })
+            }
+            </tbody>
+          </table>
         </div>
       );
     }
