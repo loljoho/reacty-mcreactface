@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import Table from '../../components/Table/Table';
 import API from '../../utils/API';
-import logo from '../../logo.png';
 
 class Dashboard extends Component {
   constructor() {
@@ -25,31 +25,8 @@ class Dashboard extends Component {
 
   render() {
     return (
-      <div className="App__inner">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          DASH BERLIN BOARD
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Dashy McDashface
-        </a>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          DASH BERLIN BOARD
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Dashy McDashface
-        </a>
+      <div className="container">
+        <Table />
       </div>
     );
   }
