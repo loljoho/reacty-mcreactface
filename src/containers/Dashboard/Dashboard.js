@@ -66,9 +66,12 @@ class Dashboard extends Component {
                 rows.map((row, index) => {
                   return (
                     <tr key={index}>
-                    {
-                      row.map((cell, idx) => <td key="{idx}">{ cell }</td>)
-                    }
+                      <td>{ row.season }</td>
+                      <td>{ row.round }</td>
+                      <td>{ row.raceName }</td>
+                      <td>{ row.Circuit.circuitName }</td>
+                      <td>{ row.Circuit.Location.locality }, { row.Circuit.Location.country }</td>
+                      <td>{ row.date } { row.time }</td>
                     </tr>
                   );
                 })
