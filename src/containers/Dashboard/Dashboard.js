@@ -63,18 +63,18 @@ class Dashboard extends Component {
           <table className="table">
             <tbody>
             {
-                rows.map((row, index) => {
-                  return (
-                    <tr key={index}>
-                      <td>{ row.season }</td>
-                      <td>{ row.round }</td>
-                      <td>{ row.raceName }</td>
-                      <td>{ row.Circuit.circuitName }</td>
-                      <td>{ row.Circuit.Location.locality }, { row.Circuit.Location.country }</td>
-                      <td>{ row.date } { row.time }</td>
-                    </tr>
-                  );
-                })
+              rows.map((row, index) => {
+                return (
+                  <tr key={index}>
+                    <td>{ row.season }</td>
+                    <td>{ row.round }</td>
+                    <td>{ row.raceName }</td>
+                    <td>{ row.Circuit.circuitName }</td>
+                    <td>{ row.Circuit.Location.locality }, { row.Circuit.Location.country }</td>
+                    <td>{ row.date } { row.time }</td>
+                  </tr>
+                );
+              })
             }
             </tbody>
           </table>
