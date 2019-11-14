@@ -60,7 +60,7 @@ class Dashboard extends Component {
       console.log(rows);
       return (
         <div className="container">
-          <table className="table">
+          <table className="table is-striped is-narrow is-hoverable is-fullwidth">
             <tbody>
             {
               rows.map((row, index) => {
