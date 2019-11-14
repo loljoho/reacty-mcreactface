@@ -13,7 +13,7 @@ class Breadcrumbs extends Component {
           <ul>
             {
               breadcrumbs.map((breadcrumb, i) => {
-                return <li><NavLink to={breadcrumb.path} activeClassName="is-active">{breadcrumb.name}</NavLink></li>
+                return <li key={i}><NavLink to={breadcrumb.path} activeClassName="is-active">{breadcrumb.name}</NavLink></li>
               })
             }
           </ul>
