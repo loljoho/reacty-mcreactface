@@ -59,7 +59,7 @@ class Dashboard extends Component {
         </div>
       )
     } else {
-      console.log(rows);
+      console.table(rows);
       return (
         <div className="container is-fluid">
           <div className="table-container">
