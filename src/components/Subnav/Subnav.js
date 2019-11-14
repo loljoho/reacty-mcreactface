@@ -16,6 +16,8 @@ class Subnav extends Component {
   }
 
   render() {
+    const { breadcrumbs } = this.props;
+
     return (
       <React.Fragment>
         <nav className="subnav has-background-white-bis">
@@ -30,15 +32,11 @@ class Subnav extends Component {
             <div className="level-left">
               <div className="breadcrumb level-item is-small" aria-label="breadcrumbs">
                 <ul>
-                  <li>
-                    <NavLink to="/home" activeClassName="is-active">Home</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/dashboard" activeClassName="is-active">Dashboard</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/drivers" activeClassName="is-active">Drivers</NavLink>
-                  </li>
+                  {
+                    breadcrumbs.map((breadcrumb, i) => {
+                      return <li><NavLink to={breadcrumb.path} activeClassName="is-active">{breadcrumb.name}</NavLink></li>
+                    })
+                  }
                 </ul>
               </div>
             </div>

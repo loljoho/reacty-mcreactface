@@ -16,10 +16,25 @@ import {
 
 class Layout extends Component {
   render() {
+    const breadcrumbs = [
+      {
+        name: 'Home',
+        path: '/home'
+      },
+      {
+        name: 'Dashboard',
+        path: '/dashboard'
+      },
+      {
+        name: 'Drivers',
+        path: '/drivers'
+      }
+    ];
+
     return (
       <React.Fragment>
         <Navbar />
-        <Subnav />
+        <Subnav breadcrumbs={breadcrumbs} />
         {/* Switchy McSwitchface */}
         <Switch>
           <Route exact path="/" name="Dashboard" component={Dashboard} />
