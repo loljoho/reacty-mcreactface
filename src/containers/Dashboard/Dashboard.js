@@ -35,7 +35,7 @@ class Dashboard extends Component {
         this.setState({
           isLoaded: true,
           error: error
-        })
+        });
       });
   }
 
