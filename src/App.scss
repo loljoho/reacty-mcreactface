@@ -30,7 +30,11 @@
 @import '~bulma/sass/grid/_all';
 @import '~bulma/sass/layout/_all';
 
+// Flag Icons
 @import '~flag-icon-css/sass/flag-icon.scss';
+
+// Components
+@import './components/Subnav/Subnav.scss';
 
 $color-bg:      #eeeeee;
 $color-text:    #222222;
@@ -80,13 +84,4 @@ code {
 
 .App-link {
   color: $color-link;
-}
-
-$subnav-border: 0.5px solid $background;
-
-.subnav {
-  padding-top: $size-7;
-  padding-bottom: $size-7;
-  border-top: $subnav-border;
-  border-bottom: $subnav-border;
 }
