@@ -61,8 +61,18 @@ class Dashboard extends Component {
     } else {
       console.log(rows);
       return (
-        <div className="container">
-          <table className="table is-striped is-narrow is-hoverable is-fullwidth">
+        <div className="container is-fluid">
+          <table className="table is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th className="has-text-centered">Season</th>
+                <th className="has-text-right"><abbr title="Round">Rnd</abbr></th>
+                <th>Race</th>
+                <th>Circuit</th>
+                <th className="has-text-centered" colSpan="2">Location</th>
+                <th className="has-text-centered" colSpan="2">Date/Time</th>
+              </tr>
+            </thead>
             <tbody>
             {
               rows.map((row, index) => {
@@ -71,20 +81,22 @@ class Dashboard extends Component {
                 let maps = encodeURI(`https://google.com/maps/search/?api=1&query=${row.Circuit.Location.lat},${row.Circuit.Location.long}`);
                 return (
                   <tr key={index}>
-                    <td>{ row.season }</td>
-                    <td>{ row.round }</td>
-                    <td>{ row.raceName }</td>
+                    <td className="has-text-centered">{ row.season }</td>
+                    <td className="has-text-right">{ row.round }</td>
+                    <td><a href="/">{ row.raceName }</a></td>
                     <td>
                       <a href={maps} rel="noopener noreferrer" target="_blank">
                         { row.Circuit.circuitName }
                       </a>
                     </td>
                     <td>
-                      <span className={`flag-icon flag-icon-${flag}`}></span>
+                      { row.Circuit.Location.locality }
                     </td>
-                    <td>{ row.Circuit.Location.locality }</td>
+                    <td>
+                      <span className={`flag-icon flag-icon-${flag}`} title={ row.Circuit.Location.country }></span>
+                    </td>
                     <td>{ date.format('YYYY MMM DD') }</td>
-                    <td>{ date.format('HH:mm:ss') }</td>
+                    <td className="has-text-centered">{ date.format('HH:mm') }</td>
                   </tr>
                 );
               })
