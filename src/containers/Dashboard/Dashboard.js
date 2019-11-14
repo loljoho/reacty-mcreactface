@@ -68,22 +68,23 @@ class Dashboard extends Component {
               rows.map((row, index) => {
                 let flag = Flags.getByCountry(row.Circuit.Location.country).iso2;
                 let date = moment(`${row.date}T${row.time}`);
+                let maps = encodeURI(`https://google.com/maps/search/?api=1&query=${row.Circuit.Location.lat},${row.Circuit.Location.long}`);
                 return (
                   <tr key={index}>
                     <td>{ row.season }</td>
                     <td>{ row.round }</td>
                     <td>{ row.raceName }</td>
-                    <td>{ row.Circuit.circuitName }</td>
+                    <td>
+                      <a href={maps} rel="noopener noreferrer" target="_blank">
+                        { row.Circuit.circuitName }
+                      </a>
+                    </td>
                     <td>
                       <span className={`flag-icon flag-icon-${flag}`}></span>
                     </td>
                     <td>{ row.Circuit.Location.locality }</td>
-                    <td>{ date.format('llll') }</td>
-                    <td>
-                      <a href={`https://google.com/maps/search/?api=1&query=${row.Circuit.Location.lat},${row.Circuit.Location.long}`}>
-                        Google Maps
-                      </a>
-                    </td>
+                    <td>{ date.format('YYYY MMM DD') }</td>
+                    <td>{ date.format('HH:mm:ss') }</td>
                   </tr>
                 );
               })
