@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 //import Table from '../../components/Table/Table';
 import API from '../../utils/API';
+import Flags from '../../utils/Flags';
 
 class Dashboard extends Component {
   _isMounted = false;
@@ -70,7 +71,7 @@ class Dashboard extends Component {
                     <td>{ row.round }</td>
                     <td>{ row.raceName }</td>
                     <td>{ row.Circuit.circuitName }</td>
-                    <td>{ row.Circuit.Location.locality }, { row.Circuit.Location.country }</td>
+                    <td>{ row.Circuit.Location.locality } { Flags.getByCountry(row.Circuit.Location.country).iso2 }</td>
                     <td>{ row.date } { row.time }</td>
                   </tr>
                 );
