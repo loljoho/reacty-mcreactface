@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import {
-  NavLink
-} from 'react-router-dom';
+// import {
+//   NavLink
+// } from 'react-router-dom';
 
 import Filter from './Filter';
+import Breadcrumbs from './Breadcrumbs';
 
 class Subnav extends Component {
   constructor(props) {
@@ -30,15 +31,7 @@ class Subnav extends Component {
             */}
 
             <div className="level-left">
-              <div className="breadcrumb level-item is-small" aria-label="breadcrumbs">
-                <ul>
-                  {
-                    breadcrumbs.map((breadcrumb, i) => {
-                      return <li><NavLink to={breadcrumb.path} activeClassName="is-active">{breadcrumb.name}</NavLink></li>
-                    })
-                  }
-                </ul>
-              </div>
+              <Breadcrumbs breadcrumbs={breadcrumbs} />
             </div>
 
             <div className="level-right">
