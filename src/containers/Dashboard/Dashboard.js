@@ -65,13 +65,17 @@ class Dashboard extends Component {
             <tbody>
             {
               rows.map((row, index) => {
+                let flag = Flags.getByCountry(row.Circuit.Location.country).iso2;
                 return (
                   <tr key={index}>
                     <td>{ row.season }</td>
                     <td>{ row.round }</td>
                     <td>{ row.raceName }</td>
                     <td>{ row.Circuit.circuitName }</td>
-                    <td>{ row.Circuit.Location.locality } { Flags.getByCountry(row.Circuit.Location.country).iso2 }</td>
+                    <td>
+                      <span className={`flag-icon flag-icon-${flag}`}></span>
+                    </td>
+                    <td>{ row.Circuit.Location.locality }</td>
                     <td>{ row.date } { row.time }</td>
                   </tr>
                 );
