@@ -77,6 +77,11 @@ class Dashboard extends Component {
                     </td>
                     <td>{ row.Circuit.Location.locality }</td>
                     <td>{ row.date } { row.time }</td>
+                    <td>
+                      <a href={`https://google.com/maps/search/?api=1&query=${row.Circuit.Location.lat},${row.Circuit.Location.long}`}>
+                        Google Maps
+                      </a>
+                    </td>
                   </tr>
                 );
               })
