@@ -1,0 +1,10 @@
+$table-container-padding-top: 1.0rem;
+$table-container-padding-bottom: 1.0rem;
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: $table-container-padding-bottom;
+  padding-top: $table-container-padding-top;
+}

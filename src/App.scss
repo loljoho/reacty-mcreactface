@@ -33,8 +33,12 @@
 // Flag Icons
 @import '~flag-icon-css/sass/flag-icon.scss';
 
-// Components
+// Container Styles
+@import './containers/Dashboard/Dashboard.scss';
+
+// Component Styles
 @import './components/Subnav/Subnav.scss';
+
 
 $color-bg:      #eeeeee;
 $color-text:    #222222;
