@@ -22,13 +22,13 @@ class Dashboard extends Component {
   }
 
   loadRaces(year = 'current') {
-    API.getRaces(year)
+    API.getResults(year)
       .then(res => {
         if (this._isMounted) {
           this.setState({ 
             data: res,
             isLoaded: true
-          })
+          });
         }
       })
       .catch(error => {
