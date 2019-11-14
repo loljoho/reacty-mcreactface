@@ -27,9 +27,11 @@ class Filter extends Component {
         <div className="control">
             <div className="select is-primary is-small">
               <select onChange={this.handleChange} value={value}>
-                {years.map(year => {
-                  return <option key={year} value={year}>{year}</option>
-                })}
+                {
+                  years.map(year => {
+                    return <option key={year} value={year}>{year}</option>
+                  })
+                }
               </select>
             </div>
           </div>   
