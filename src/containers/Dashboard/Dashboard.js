@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 //import Table from '../../components/Table/Table';
 import API from '../../utils/API';
 import Flags from '../../utils/Flags';
@@ -66,6 +67,7 @@ class Dashboard extends Component {
             {
               rows.map((row, index) => {
                 let flag = Flags.getByCountry(row.Circuit.Location.country).iso2;
+                let date = moment(`${row.date}T${row.time}`);
                 return (
                   <tr key={index}>
                     <td>{ row.season }</td>
@@ -76,7 +78,7 @@ class Dashboard extends Component {
                       <span className={`flag-icon flag-icon-${flag}`}></span>
                     </td>
                     <td>{ row.Circuit.Location.locality }</td>
-                    <td>{ row.date } { row.time }</td>
+                    <td>{ date.format('llll') }</td>
                     <td>
                       <a href={`https://google.com/maps/search/?api=1&query=${row.Circuit.Location.lat},${row.Circuit.Location.long}`}>
                         Google Maps
