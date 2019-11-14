@@ -9,7 +9,9 @@ import Subnav from '../Subnav/Subnav';
 
 import {
   Home,
-  Dashboard
+  Dashboard,
+  Results,
+  Races,
 } from '../../containers';
 
 class Layout extends Component {
@@ -21,6 +23,8 @@ class Layout extends Component {
         {/* Switchy McSwitchface */}
         <Switch>
           <Route exact path="/" name="Home" component={Home} />
+          <Route path="/results" name="Results" component={Results} />
+          <Route path="/races" name="Races" component={Races} />
           <Route path="/dashboard" name="Dashboard" component={Dashboard} />
         </Switch>
       </React.Fragment>
