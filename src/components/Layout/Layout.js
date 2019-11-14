@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import {
   Switch,
-  Route
+  Route,
+  Redirect,
 } from 'react-router-dom';
 
 import Navbar from '../Navbar/Navbar';
@@ -24,6 +25,7 @@ class Layout extends Component {
           <Route exact path="/" name="Dashboard" component={Dashboard} />
           <Route path="/results" name="Results" component={Results} />
           <Route path="/races" name="Races" component={Races} />
+          <Redirect from="/" to="/" />
         </Switch>
       </React.Fragment>
     )
