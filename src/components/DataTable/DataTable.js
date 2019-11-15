@@ -5,19 +5,6 @@ import Flags from '../../utils/Flags';
 class DataTable extends Component {
 
   render() {
-    // if (this.props.error) {
-    //   return (
-    //     <div className="container">
-    //       ERROR: { this.props.error.message }
-    //     </div>
-    //   );
-    // } else if (!this.props.isLoaded) {
-    //   return (
-    //     <div className="container">
-    //       LOADING...
-    //     </div>
-    //   )
-    // } else {
       console.table(this.props.data);
       return (
         <div className="container is-fluid">
