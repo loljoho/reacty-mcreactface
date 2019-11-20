@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { 
   DataTable,
-  TableRow 
+  TableHead,
+  TableRow
 } from '../../components/DataTable/';
 import API from '../../utils/API';
 
@@ -56,13 +57,16 @@ class Home extends Component {
         <DataTable data={this.state.data} 
           isLoaded={this.state.isLoaded} 
           error={this.state.error}>
-          {
-            this.state.data.map((row, index) => {
-              return (
-                <TableRow key={index} data={row} />
-              );
-            })
-          }
+            <TableHead />
+            <tbody>
+              {
+                this.state.data.map((row, index) => {
+                  return (
+                    <TableRow key={index} data={row} />
+                  );
+                })
+              }
+            </tbody>
         </DataTable>
       );  
     }
