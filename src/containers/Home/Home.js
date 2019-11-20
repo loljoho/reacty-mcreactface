@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import DataTable from '../../components/DataTable/DataTable';
+import { 
+  DataTable,
+  TableRow 
+} from '../../components/DataTable/';
 import API from '../../utils/API';
 
 class Home extends Component {
