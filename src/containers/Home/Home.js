@@ -47,7 +47,6 @@ class Home extends Component {
   }
 
   render() {
-    console.log('Rendering Home...');
     if (this.state.error) {
       return <h4 className="is-size-4	has-text-centered has-text-warning">ERROR: { this.props.error.message }</h4>;
     } else if (!this.state.isLoaded) {
