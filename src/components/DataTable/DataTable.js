@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import moment from 'moment';
-import Flags from '../../utils/Flags';
 
 class DataTable extends Component {
 
