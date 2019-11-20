@@ -56,13 +56,13 @@ class Home extends Component {
         <DataTable data={this.state.data} 
           isLoaded={this.state.isLoaded} 
           error={this.state.error}>
-            {
-              this.state.data.map((row, index) => {
-                return (
-                  <TableRow key={index} data={row} />
-                );
-              })
-            }
+          {
+            this.state.data.map((row, index) => {
+              return (
+                <TableRow key={index} data={row} />
+              );
+            })
+          }
         </DataTable>
       );  
     }
