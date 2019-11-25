@@ -9,6 +9,7 @@ import Navbar from '../Navbar/Navbar';
 import Subnav from '../Subnav/Subnav';
 
 import {
+  Home,
   Dashboard,
   Results,
   Races,
@@ -37,7 +38,8 @@ class Layout extends Component {
         <Subnav breadcrumbs={breadcrumbs} />
         {/* Switchy McSwitchface */}
         <Switch>
-          <Route exact path="/" name="Dashboard" component={Dashboard} />
+          <Route exact path="/" name="Home" component={Home} />
+          <Route path="/dashboard" name="Dashboard" component={Dashboard} />
           <Route path="/results" name="Results" component={Results} />
           <Route path="/races" name="Races" component={Races} />
           <Redirect from="/" to="/" />
